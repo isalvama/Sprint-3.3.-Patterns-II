@@ -1,27 +1,33 @@
 package builder.plates;
 
 public class FoodPlate {
-    protected boolean isVegan;
-    protected boolean isGlutenFree;
+    private String name;
+    private boolean isVegan;
+    private boolean isGlutenFree;
 
-    protected FoodPlate (){}
+    public FoodPlate(String name){
+        this.name = name;
+        this.isVegan = false;
+        this.isGlutenFree = false;
+    }
 
-    public abstract static class Builder<T extends Builder<T>> {
-        protected FoodPlate foodPlate;
-        protected abstract T self();
+    public boolean isVegan() {
+        return isVegan;
+    }
 
-        public T isVegan() {
-            foodPlate.isVegan = true;
-            return self();
-        }
+    public void setVegan() {
+        isVegan = true;
+    }
 
-        public T isGlutenFree() {
-            foodPlate.isGlutenFree = true;
-            return self();
-        }
+    public boolean isGlutenFree() {
+        return isGlutenFree;
+    }
 
-        public FoodPlate build() {
-            return foodPlate;
-        }
+    public void setGlutenFree() {
+        isGlutenFree = true;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
