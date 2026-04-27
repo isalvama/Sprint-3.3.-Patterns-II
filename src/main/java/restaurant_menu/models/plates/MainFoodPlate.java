@@ -16,4 +16,7 @@ public class MainFoodPlate extends FoodPlate {
         this.supplement = supplement;
     }
 
+    public String getSupplement() {
+        return supplement;
+    }
 }

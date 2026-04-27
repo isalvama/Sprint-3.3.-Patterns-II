@@ -45,6 +45,10 @@ public class Menu {
         return mainCourse;
     }
 
+    public String getDrink() {
+        return drink;
+    }
+
     public void setMainCourse(MainFoodPlate mainCourse) {
         this.mainCourse = mainCourse;
     }
