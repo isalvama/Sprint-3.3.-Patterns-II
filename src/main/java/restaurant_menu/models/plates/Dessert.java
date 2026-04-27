@@ -1,4 +1,4 @@
-package builder.plates;
+package restaurant_menu.models.plates;
 
 public class Dessert {
     private String name;

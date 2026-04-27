@@ -1,17 +1,17 @@
-package builder.menu;
+package restaurant_menu.models.menu;
 
-import builder.plates.Dessert;
-import builder.plates.EntrantFoodPlate;
-import builder.plates.MainFoodPlate;
+import restaurant_menu.models.plates.Dessert;
+import restaurant_menu.models.plates.EntrantFoodPlate;
+import restaurant_menu.models.plates.MainFoodPlate;
 
 public class Menu {
     private EntrantFoodPlate entrant;
     private MainFoodPlate mainCourse;
     private Dessert dessert;
     private String drink;
-    private String coffe;
+    private String coffee;
 
-    Menu(){}
+    public Menu(){}
 
     public void setEntrant(EntrantFoodPlate entrant) {
         this.entrant = entrant;
@@ -26,15 +26,15 @@ public class Menu {
     }
 
     public void setCoffee(String coffeName) {
-        this.coffe = coffeName;
+        this.coffee = coffeName;
     }
 
     public Dessert getDessert() {
         return dessert;
     }
 
-    public String getCoffe() {
-        return coffe;
+    public String getCoffee() {
+        return coffee;
     }
 
     public EntrantFoodPlate getEntrant() {

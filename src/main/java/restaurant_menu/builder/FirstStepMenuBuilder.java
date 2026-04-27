@@ -1,4 +1,4 @@
-package builder.menu;
+package restaurant_menu.builder;
 
 
 public interface FirstStepMenuBuilder {

@@ -1,8 +1,9 @@
-package builder.menu;
+package restaurant_menu.builder;
 
-import builder.plates.Dessert;
-import builder.plates.EntrantFoodPlate;
-import builder.plates.MainFoodPlate;
+import restaurant_menu.models.menu.Menu;
+import restaurant_menu.models.plates.Dessert;
+import restaurant_menu.models.plates.EntrantFoodPlate;
+import restaurant_menu.models.plates.MainFoodPlate;
 
 public class MenuBuilder implements FirstStepMenuBuilder {
     Menu menuManagedInstance = new Menu();
