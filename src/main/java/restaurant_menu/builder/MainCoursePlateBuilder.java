@@ -6,8 +6,8 @@ public interface MainCoursePlateBuilder {
     MainCoursePlateBuilder isVegan();
     MainCoursePlateBuilder isGlutenFree();
     MainCoursePlateBuilder withSupplement(String supplementName);
-    LastBuilder withDessert(String dessertName) throws IllegalAccessException;
-    LastBuilder withCoffee(String coffeeName) throws IllegalAccessException;
+    LastBuilder withDessert(String dessertName);
+    LastBuilder withCoffee(String coffeeName);
     MainCoursePlateBuilder withDrink(String drinkName);
     Menu build();
 }
