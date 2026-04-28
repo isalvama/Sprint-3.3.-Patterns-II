@@ -22,15 +22,18 @@ public class StockAgent extends Observable {
     }
 
     public void stockMarketUp(double stockMarketValueIncrease) {
-        this.stockMarketValue+= stockMarketValueIncrease;
-        setChanged();
-        notifyObservers(new StockMarketUpdate("Stock market went UP to " + stockMarketValueIncrease, stockMarketValueIncrease));
+        this.stockMarketValue += stockMarketValueIncrease;
+        notifyAgencies("UP", stockMarketValueIncrease);
     }
 
     public void stockMarketDown(double stockMarketValueDecrease){
         this.stockMarketValue -= stockMarketValueDecrease;
+        notifyAgencies("DOWN", stockMarketValueDecrease);
+    }
+
+    public void notifyAgencies(String updateType, double stockMarketValueUpdate){
         setChanged();
-        notifyObservers(new StockMarketUpdate("Stock market went DOWN to " + stockMarketValueDecrease, stockMarketValueDecrease));
+        notifyObservers(new StockMarketUpdate(String.format("Stock market went %s to %s", updateType, stockMarketValueUpdate), stockMarketValueUpdate));
     }
 
 }
