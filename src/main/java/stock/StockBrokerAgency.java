@@ -1,5 +1,6 @@
 package stock;
 
+import java.util.Objects;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -27,5 +28,17 @@ public class StockBrokerAgency implements Observer {
         this.stockMarketFirmValue =+ stockMarketUpdate.getValueUpdate();
         System.out.println(this.name + " received notification: " + stockMarketUpdate.getMessage());
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        StockBrokerAgency that = (StockBrokerAgency) o;
+        return Double.compare(stockMarketFirmValue, that.stockMarketFirmValue) == 0 && Objects.equals(name, that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, stockMarketFirmValue);
     }
 }
