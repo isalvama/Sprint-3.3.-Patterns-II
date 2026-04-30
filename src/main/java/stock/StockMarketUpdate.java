@@ -1,16 +1,16 @@
 package stock;
 
 public class StockMarketUpdate {
-    private double valueUpdate;
+    private double newStockMarketValue;
     private String message;
 
-    public StockMarketUpdate(String message, double valueUpdate) {
+    public StockMarketUpdate(String message, double newStockMarketValue) {
         this.message = message;
-        this.valueUpdate = valueUpdate;
+        this.newStockMarketValue = newStockMarketValue;
     }
 
-    public double getValueUpdate() {
-        return valueUpdate;
+    public double getNewStockMarketValue() {
+        return newStockMarketValue;
     }
 
     public String getMessage() {
